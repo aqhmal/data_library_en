@@ -2322,19 +2322,14 @@ package ninjasaga.data
          }
       }
       
-      public function getByClass(param1:*, param2:String) : Object
-      {
-         var _loc3_:uint = 0;
-         _loc3_ = 0;
-         while(_loc3_ < param1.length)
-         {
-            if(param2 == param1[_loc3_].clsName)
-            {
-               return param1[_loc3_];
-            }
-            _loc3_++;
-         }
-         return null;
-      }
-   }
+      public function getByClass(param1: * , param2: String): Object {
+          var loc1:* = 0;
+          while (loc1 < param1.length) {
+               if (param2 == param1[loc1].clsName) {
+                    return param1[loc1];
+               }
+               loc1 = loc1 + 1;
+          }
+          return null;
+     }
 }

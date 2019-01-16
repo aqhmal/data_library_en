@@ -101,8 +101,8 @@ package ninjasaga.data
       
       public static function getCreateHairData(param1:uint) : Array
       {
-         var _loc2_:Array = HairData.getCreateData();
-         return _loc2_[param1];
+         var loc1:* = HairData.getCreateData();
+         return loc1[param1];
       }
    }
 }

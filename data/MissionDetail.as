@@ -4409,8 +4409,8 @@ package ninjasaga.data
             "description":"Prepare a turkey feast for villagers",
             "requirements":null
          };
-         var _loc1_:MissionDetailsLang = new MissionDetailsLang();
-         _loc1_.MissionDetailsLang_Process(MISSION_DATA);
+         var loc1: * = new MissionDetailsLang();
+         loc1.MissionDetailsLang_Process(MISSION_DATA);
          return MISSION_DATA;
       }
       

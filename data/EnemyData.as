@@ -11,8 +11,7 @@ package ninjasaga.data
       public function EnemyData(param1:SingletonBlocker)
       {
          super();
-         if(param1 == null)
-         {
+         if(param1 == null) {
             throw new Error("Error: Instantiation failed: Use EnemyData.getInstance() instead of new.");
          }
          this.enemyArr = [];
@@ -2602,8 +2601,8 @@ package ninjasaga.data
             "isNew":true,
             "event":true
          });
-         var _loc2_:EnemyDataLang = new EnemyDataLang();
-         _loc2_.EnemyDataLang_Process(this.enemyArr);
+         var loc2:EnemyDataLang = new EnemyDataLang();
+         loc2.EnemyDataLang_Process(this.enemyArr);
       }
       
       public static function forceGetInstance() : EnemyData
@@ -2628,67 +2627,54 @@ package ninjasaga.data
       
       public function getByClass(param1:String) : Object
       {
-         var _loc2_:uint = 0;
-         _loc2_ = 0;
-         while(_loc2_ < this.enemyArr.length)
-         {
-            if(param1 == this.enemyArr[_loc2_].clsName)
-            {
-               return this.enemyArr[_loc2_];
+         var loc1: * = 0;
+         while (loc1 < this.enemyArr.length) {
+            if (param1 == this.enemyArr[loc1].clsName) {
+               return this.enemyArr[loc1];
             }
-            _loc2_++;
+            loc1 = loc1 + 1;
          }
          return null;
       }
       
       public function getById(param1:int) : Object
       {
-         var _loc2_:uint = 0;
-         _loc2_ = 0;
-         while(_loc2_ < this.enemyArr.length)
-         {
-            if(this.enemyArr[_loc2_].id)
-            {
-               if(param1 == this.enemyArr[_loc2_].id)
-               {
-                  return this.enemyArr[_loc2_];
+         var loc1: * = 0;
+         while (loc1 < this.enemyArr.length) {
+            if (this.enemyArr[loc1].id) {
+               if (param1 == this.enemyArr[loc1].id) {
+                  return this.enemyArr[loc1];
                }
             }
-            _loc2_++;
+            loc1 = loc1 + 1;
          }
          return null;
       }
-      
+
       public function getPartyBoss() : Array
       {
-         var _loc1_:uint = 0;
-         var _loc2_:* = [];
-         _loc1_ = 0;
-         while(_loc1_ < this.enemyArr.length)
-         {
-            if(this.enemyArr[_loc1_].isPartyBoss == true)
-            {
-               _loc2_.push(this.enemyArr[_loc1_]);
+         var loc1:uint = 0;
+         var loc2:* = [];
+         while (loc1 < this.enemyArr.length) {
+            if (this.enemyArr[loc1].isPartyBoss == true) {
+               loc2.push(this.enemyArr[loc1]);
             }
-            _loc1_++;
+            loc1++;
          }
-         return _loc2_;
+         return loc2;
       }
       
       public function getEventBoss() : Array
       {
-         var _loc1_:uint = 0;
-         var _loc2_:* = [];
-         _loc1_ = 0;
-         while(_loc1_ < this.enemyArr.length)
-         {
-            if(this.enemyArr[_loc1_].event == true)
-            {
-               _loc2_.push(this.enemyArr[_loc1_]);
+         var loc1:uint = 0;
+         var loc2:* = [];
+         while (loc1 < this.enemyArr.length) {
+            if (this.enemyArr[loc1].event == true) {
+               loc2.push(this.enemyArr[loc1]);
             }
-            _loc1_++;
+            loc1++;
          }
-         return _loc2_;
+         return loc2;
       }
       
       public function get arr() : Array

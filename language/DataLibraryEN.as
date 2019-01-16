@@ -7,20 +7,10 @@ package ninjasaga.language
    
    public class DataLibraryEN extends MovieClip
    {
-       
-      
       public function DataLibraryEN()
       {
-         var _loc1_:§_o_-_--§ = new §_o_-_--§();
-         if(!_loc1_.§_o_---_§(this))
-         {
-            return;
-         }
          super();
-      }
-      
-      public function DataLibrary() : *
-      {
+         return;
       }
       
       private function get SystemData() : *
@@ -35,8 +25,8 @@ package ninjasaga.language
       
       public function getHairData(param1:uint) : Array
       {
-         var _loc2_:Array = HairData.getData();
-         return _loc2_[param1];
+         var loc1:* = ninjasaga.data.HairData.getData();
+         return loc1[arg1];
       }
       
       public function getHairDetailData() : Object
